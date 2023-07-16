@@ -1,0 +1,15 @@
+Old Eclipse Project Import TODO List:
+
+[x] Import source code from old Eclipse project
+[x] Create new Makefile for project
+[x] Compile a working build
+[x] Add gpl short txt to all src files
+[x] Create new branch "old-proj-import" on github
+[x] Find appropriate license; update
+[x] Add build artifacts to .gitignore
+[x] Write a super short README
+[x] Create CHANGELOG
+[ ] Prep & push init commit to "old-proj-import" branch
+[ ] Merge "old-proj-import" to "main"
+[ ] Tag build as "v0.1-alpha"
+[ ] Prep todo "002_style-refactor.txt"

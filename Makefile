@@ -1,5 +1,5 @@
 # ==============================================================================
-# .gitignore - git exclusions
+# Makefile - Project build configuration
 # ------------------------------------------------------------------------------
 # Fighting Words - The Tile-Dropping, Word-Spelling, Battle Game
 # Copyright (C) 2023  Kristoffer A. Wright
@@ -18,58 +18,33 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ==============================================================================
 
-# Prerequisites
-*.d
+OBJS = src/main.c \
+	   build/obj/dict.o \
+	   build/obj/entity.o \
+	   build/obj/err.o \
+	   build/obj/letter.o \
+	   build/obj/mem.o \
+	   build/obj/rand.o \
+	   build/obj/render.o \
+	   build/obj/res.o \
+	   build/obj/tex.o
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+CC = gcc
 
-# Linker output
-*.ilk
-*.map
-*.exp
+COMPILE_FLAGS = -Wall \
+				-Werror \
+				-g
 
-# Precompiled Headers
-*.gch
-*.pch
+LINK_FLAGS = -lSDL2 \
+			 -lSDL2_ttf
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+EX_NAME = build/fw
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+clean:
+	rm -Rf build; mkdir build; mkdir build/obj
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
+build/obj/%.o: src/%.c
+	$(CC) -c -o $@ $< $(COMPILE_FLAGS) $(LINK_FLAGS)
 
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
-
-# Build artifacts
-build
+all: $(OBJS)
+	$(CC) $(OBJS) $(COMPILE_FLAGS) $(LINK_FLAGS) -o $(EX_NAME)
