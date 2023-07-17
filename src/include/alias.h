@@ -21,7 +21,27 @@
 #ifndef __ALIAS_H__
 #define __ALIAS_H__
 
-typedef char Boolean;
-typedef char *String;
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_ttf.h>
+
+#include "const.h"
+
+typedef char Boolean;       // TODO Obs
+typedef char *String;       // TODO Obs
+
+/**
+ * Stores all named colors used in the game.
+ */
+typedef SDL_Color ColorMap[COLOR_MAP_SIZE];
+
+/**
+ * Stores all named textures used in the game.
+ */
+typedef SDL_Texture* TexMap[TEXTURE_MAP_SIZE];
+
+/**
+ * Stores all named fonts used in the game.
+ */
+typedef TTF_Font* FontMap[FONT_MAP_SIZE];
 
 #endif

@@ -1,0 +1,12 @@
+Style Refactor
+
+[ ] Create and use aliases for array types
+[ ] Remove usage of string and bool aliases
+[ ] Rename structs
+[ ] Rename enums
+[ ] Rename macro constants
+[ ] Rename macro functions
+[ ] Rename function names
+[ ] Rename function arguments
+[ ] Rename local variables
+[ ] Move and fix doc

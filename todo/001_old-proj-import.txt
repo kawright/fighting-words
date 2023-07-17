@@ -9,7 +9,7 @@ Old Eclipse Project Import TODO List:
 [x] Add build artifacts to .gitignore
 [x] Write a super short README
 [x] Create CHANGELOG
-[ ] Prep & push init commit to "old-proj-import" branch
-[ ] Merge "old-proj-import" to "main"
-[ ] Tag build as "v0.1-alpha"
-[ ] Prep todo "002_style-refactor.txt"
+[x] Prep & push init commit to "old-proj-import" branch
+[x] Merge "old-proj-import" to "main"
+[x] Tag build as "v0.1-alpha"
+[x] Prep todo "002_style-refactor.txt"
